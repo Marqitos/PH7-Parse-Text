@@ -11,14 +11,12 @@
  */
 
 namespace PH7;
-defined('PH7') or exit('Restricted access');
 
 // Autoloading Classes Files
-spl_autoload_register(function($sClass)
-{
+spl_autoload_register(function($sClass) {
     // Hack to remove namespace and backslash
     $sClass = str_replace(array(__NAMESPACE__ . '\\', '\\'), '/', $sClass);
 
-    if(is_file(dirname(__DIR__) . $sClass . '.class.php'))
-        require dirname(__DIR__) . $sClass . '.class.php';
+    if(is_file(dirname(__DIR__) . $sClass . '.php'))
+        require dirname(__DIR__) . $sClass . '.php';
 });

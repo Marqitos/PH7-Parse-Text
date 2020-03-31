@@ -12,17 +12,20 @@
  */
 
 namespace PH7\Parse\Text;
-defined('PH7') or exit('Restricted access');
 
-class BbCode extends Code
-{
+use PH7\Parse\Code;
+use function preg_replace;
+use function str_replace;
+
+require_once 'Code.php';
+
+class BbCode extends Code {
 
     /**
      * @access public
      * @param string $sText
      */
-    public function __construct($sText)
-    {
+    public function __construct($sText) {
         $this->sText = $sText;
         parent::__construct();
     }
@@ -31,8 +34,7 @@ class BbCode extends Code
      * @access public
      * @return string The code parsed
      */
-    public function __toString()
-    {
+    public function __toString() {
         return $this->sText;
     }
 
@@ -42,8 +44,7 @@ class BbCode extends Code
      * @access protected
      * @return void
      */
-    protected function run()
-    {
+    protected function run() {
         $this->paragraph();
         $this->parse();
     }
@@ -54,8 +55,7 @@ class BbCode extends Code
      * @access protected
      * @return void
      */
-    protected function parse()
-    {
+    protected function parse() {
         // [h]eading
         $this->sText = preg_replace('/\[(h\d{1,6})](.+?)\[\/(h\d{1,6})]/i', '<\1>\2</\3>', $this->sText);
 

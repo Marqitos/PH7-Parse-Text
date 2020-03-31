@@ -11,15 +11,15 @@
  */
 
 namespace PH7;
-define('PH7', true);
 
-use PH7\Parse\Text as Txt;
+use PH7\Parse\Text\BbCode;
+use function file_get_contents;
 
-require '_autoload.php';
+require_once 'PH7/Parse/Text/BBCode.php';
 
 $sBbCodeText = file_get_contents('text/bbcode.bbc');
 
-$oBbCode = new Txt\BbCode($sBbCodeText);
+$oBbCode = new BbCode($sBbCodeText);
 ?>
 <!DOCTYPE html>
 <html lang="en-US">

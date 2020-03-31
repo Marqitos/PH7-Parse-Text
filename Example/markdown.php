@@ -11,15 +11,16 @@
  */
 
 namespace PH7;
-define('PH7', true);
 
-use PH7\Parse\Text as Txt;
+use PH7\Parse\Text\Markdown;
+use function file_get_contents;
 
-require '_autoload.php';
+require_once 'PH7/Parse/Text/BBCode.php';
 
 $sMarkdownText = file_get_contents('text/markdown.md');
 
-$oMarkdown = new Txt\Markdown($sMarkdownText);
+$oMarkdown = new Markdown($sMarkdownText);
+
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -31,5 +32,3 @@ $oMarkdown = new Txt\Markdown($sMarkdownText);
 <?php echo $oMarkdown; ?>
 </body>
 </html>
-
-

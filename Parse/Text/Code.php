@@ -12,10 +12,11 @@
  */
 
 namespace PH7\Parse\Text;
-defined('PH7') or exit('Restricted access');
 
-abstract class Code
-{
+use function preg_replace;
+use function str_replace;
+
+abstract class Code {
 
     /**
      * @access protected
@@ -49,8 +50,7 @@ abstract class Code
      * @access protected
      * @return void
      */
-    protected function paragraph()
-    {
+    protected function paragraph() {
         $this->sText = '<p>' . str_replace("\n\n", '</p><p>', $this->sText) . '</p>';
     }
 
@@ -60,8 +60,7 @@ abstract class Code
      * @access protected
      * @return void
      */
-    protected function convert()
-    {
+    protected function convert() {
         // Convert Windows (\r\n) to Unix (\n)
         $this->sText = str_replace("\r\n", "\n", $this->sText);
 

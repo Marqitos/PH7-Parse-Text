@@ -1,17 +1,27 @@
-# Parser for BBCode and Markdown Markup Language
+# Parser for BBCode, Markdown Markup Language and plain text
 
-Interpretation for two markup languages, BBCode and Markup with support of HTML5.
-They also complement each other with my [parser emoticons](http://github.com/pH-7/PHP-Emoticon-Parser).
+Interpretation for markup languages: BBCode, Markup and plain text with support of HTML5.
+> They also complement each other with my [parser emoticons](http://github.com/pH-7/PHP-Emoticon-Parser).
+>
+Pierre-Henry Soria
 
-Note: The language BBCode is customized by me, I added some extra tags (tags and some do not have the same name).
+> Note: The language BBCode is customized by me, I added some extra tags (tags and some do not have the same name).
+>
+Pierre-Henry Soria
 
 ## Server Requirements
 
 PHP 5.3.0 or newer.
 
-## Author 
+## Original author 
 
-Pierre-Henry Soria
+[Pierre-Henry Soria](https://github.com/pH-7)
+
+[Original repository](https://github.com/pH-7/BBCode-Markdown-PHP-Parser)
+
+## Fork editor
+
+[Marcos Porto](https://github.com/Marqitos)
 
 ## License
 
